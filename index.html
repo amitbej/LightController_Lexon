@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting Control Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <h1>Lighting Control</h1>
+
+        <label for="miniserverAddress">Miniserver Address:</label>
+        <input type="text" id="miniserverAddress" placeholder="Enter Miniserver Address">
+
+        <label for="controllerName">Lighting Controller:</label>
+        <input type="text" id="controllerName" placeholder="Enter Lighting Controller">
+
+        <label for="iconUpload">Upload Icon:</label>
+        <input type="file" id="iconUpload">
+
+        <div class="tile" id="lightingTile">
+            <img src="default-icon.png" alt="Lighting Icon" id="tileIcon">
+            <p>Lighting: <span id="status">Off</span></p>
+            <button onclick="toggleLighting()">Toggle</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
