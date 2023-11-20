@@ -18,6 +18,7 @@ function toggleLighting() {
   const controllerName = document.getElementById("controllerName").value;
   const statusElement = document.getElementById("status");
 
+<<<<<<< HEAD
   // ill use API call to control the lighting circuit
   // toggle between On and Off for sample view
   const currentStatus = statusElement.innerText;
@@ -30,4 +31,16 @@ function toggleLighting() {
   console.log(
     `Lighting on ${controllerName} in Miniserver at ${miniserverAddress} is now ${newStatus}`
   );
+=======
+    // ill use API call to control the lighting circuit
+  // toggle between On and Off for sample view
+    const currentStatus = statusElement.innerText;
+    const newStatus = currentStatus === 'On' ? 'Off' : 'On';
+
+    // Update the status
+    statusElement.innerText = newStatus;
+
+    // Send a command to the Miniserver
+    console.log(`Lighting on ${controllerName} in Miniserver at ${miniserverAddress} is now ${newStatus}`);
+>>>>>>> 819df1204b16dad1dca1a0d4ffa27da016a23da4
 }
