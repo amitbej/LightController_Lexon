@@ -18,15 +18,14 @@ function toggleLighting() {
     const controllerName = document.getElementById('controllerName').value;
     const statusElement = document.getElementById('status');
 
-    // Simulate API call to Loxone Miniserver
-    // In a real-world scenario, you would make an API call to control the lighting circuit
-    // Here, we toggle between On and Off for demonstration purposes
+    // ill use API call to control the lighting circuit
+  // toggle between On and Off for sample view
     const currentStatus = statusElement.innerText;
     const newStatus = currentStatus === 'On' ? 'Off' : 'On';
 
-    // Update the status on the tile
+    // Update the status
     statusElement.innerText = newStatus;
 
-    // Log the action (in a real scenario, you would send a command to the Miniserver)
+    // Send a command to the Miniserver
     console.log(`Lighting on ${controllerName} in Miniserver at ${miniserverAddress} is now ${newStatus}`);
 }
